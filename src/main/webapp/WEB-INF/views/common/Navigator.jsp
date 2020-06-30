@@ -24,11 +24,11 @@
     </div>
   </div>
 </nav>
-
+<script></script>
 <script>
 	$('#a_join').click(function(e){
 		e.preventDefault()
 		alert('야옹')
-		location.href = `${context}/member/join/form`	
+		location.href = `${context}/location/member/JoinForm`	
 	})
 </script>

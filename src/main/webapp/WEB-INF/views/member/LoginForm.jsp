@@ -2,20 +2,14 @@
     pageEncoding="UTF-8"%>
 
 
-<form id="joinForm" style="border:1px solid #ccc">
+<form id="loginForm" style="border:1px solid #ccc">
   <div class="container">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
+    <h1>Login Up</h1>
+
     <hr>
 
     <label for="memberId"><b>memberId</b></label>
     <input id="memberId" type="text" placeholder="Enter memberId" name="memberId" required>
-
-    <label for="memberName"><b>memberName</b></label>
-    <input id="memberName" type="text" placeholder="Enter memberName" name="memberName" required>
-    
-    <label for="email"><b>email</b></label>
-    <input id="email" type="text" placeholder="Enter email" name="email" required>
 
     <label for="psw"><b>Password</b></label>
     <input id="password" type="password" placeholder="Enter Password" name="password" required>
@@ -31,20 +25,18 @@
 
     <div class="clearfix">
       <button type="button" class="cancelbtn">Cancel</button>
-      <button id="signup_btn" type="submit" class="signupbtn">Sign Up</button>
+      <button id="login_btn" type="submit" class="login_btn">login</button>
     </div>
   </div>
 </form>
 
 <script src="${javascript}/store/member.js"></script>
 <script>
-document.getElementById('signup_btn').addEventListener('click',function(e){
+document.getElementById('login_btn').addEventListener('click',function(e){
     e.preventDefault()
     member.init()
-    member.join({
+    member.login({
     	"memberId": document.getElementById('memberId').value,
-    	"memberName": document.getElementById('memberName').value,
-    	"email": document.getElementById('email').value,
     	"password": document.getElementById('password').value
     	})
 })
@@ -98,7 +90,7 @@ button:hover {
 }
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+.cancelbtn, .login_btn {
   float: left;
   width: 50%;
 }
@@ -117,7 +109,7 @@ button:hover {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .cancelbtn, .login_btn {
      width: 100%;
   }
 }

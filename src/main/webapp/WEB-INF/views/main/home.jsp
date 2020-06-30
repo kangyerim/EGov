@@ -42,3 +42,8 @@
     </div>
   </div>
 </div><br><br>
+
+
+<script>
+app.init("${context}")
+</script>

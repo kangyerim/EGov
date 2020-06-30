@@ -8,5 +8,5 @@ import lombok.Data;
 @Component
 public class Member {
 	private int memberNo;
-	private String memeberId, password, memberName, email;
+	private String memberId, password, memberName, email;
 }
