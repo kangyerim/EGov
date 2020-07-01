@@ -13,7 +13,11 @@ member = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				location.href = _+`/location/member/LoginForm`
+				if(res === 'SUCCESS'){
+					location.href = _+`/location/member/LoginForm`
+				} else {
+					location.href = _+`/location/member/JoinForm`
+				}
 			},
 			error: function(err){
 				alert(err)

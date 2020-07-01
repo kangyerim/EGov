@@ -4,6 +4,31 @@
 
 <mapper namespace="com.board.web.mappers.MemberMapper">
 
-    
+	<insert id="create" parameterType="com.board.web.domains.Member">
+		insert memberid memberId, password, membername memberName, email
+		into members
+		value(#{memberid}, #{password}, #{membername}, #{email})
+	</insert>
+	
+	<delete id="delete" parameterType="com.board.web.domains.Member">
+		delete from members where memberId like #{memberid}
+	</delete>
 
+
+	<select id="truncateMember" parameterType="HashMap">
+		${TRUNCATE_PERSONS}
+	</select>
+
+	<select id="createDB" parameterType="HashMap">
+		${CREATE_DB}
+	</select>
+
+	<select id="createMembers" parameterType="HashMap">
+		${CREATE_MEMBERS}
+	</select>
+
+	<select id="dropMembers" parameterType="HashMap">
+		${DROP_MEMBERS}
+	</select>
+	
 </mapper>
