@@ -12,6 +12,7 @@ import com.board.web.domains.Member;
 @Repository
 public interface MemberMapper {
 
+
 	public void create(Member member);
 
 	public void delete(Member member);
@@ -31,5 +32,7 @@ public interface MemberMapper {
 	public void createMembers(HashMap<String, String> paramMap);
 	
 	public void dropMembers(HashMap<String, String> paramMap);
+
+	public Member selectByMemberIdAndPassword(Member param);
 
 }

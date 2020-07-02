@@ -52,7 +52,7 @@ public class UserProxy extends Proxy {
 	}
 	
 	public Member makeMember() {
-		return new Member( makeMemberId(),"1",makeMemberName(), makeMemberId()+"@gmail.com");
+		return new Member( makeMemberId(),"1",makeMemberName(), makeMemberId()+"@gmail.com", "");
 	}
 	
 	@Transactional // aop의 반복

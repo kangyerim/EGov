@@ -19,4 +19,6 @@ public void signIn (Member member);
 	public Member listOne(String memberId);
 	
 	public Member logIn (Member member);
+	
+	public Member findByMemberIdAndPassword(Member member);
 }

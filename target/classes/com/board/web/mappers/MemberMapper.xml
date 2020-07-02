@@ -7,28 +7,37 @@
 	<insert id="create" parameterType="com.board.web.domains.Member">
 		insert memberid memberId, password, membername memberName, email
 		into members
-		value(#{memberid}, #{password}, #{membername}, #{email})
+		value(#{memberId}, #{password}, #{memberName}, #{email})
 	</insert>
 	
 	<delete id="delete" parameterType="com.board.web.domains.Member">
-		delete from members where memberId like #{memberid}
+		delete from members where memberid like #{memberId}
 	</delete>
 
 
-	<select id="truncateMember" parameterType="HashMap">
+	<select id="truncateMember" parameterType="com.board.web.domains.Member">
 		${TRUNCATE_PERSONS}
 	</select>
 
-	<select id="createDB" parameterType="HashMap">
+	<select id="createDB" parameterType="com.board.web.domains.Member">
 		${CREATE_DB}
 	</select>
 
-	<select id="createMembers" parameterType="HashMap">
+	<select id="createMembers" parameterType="com.board.web.domains.Member">
 		${CREATE_MEMBERS}
 	</select>
 
-	<select id="dropMembers" parameterType="HashMap">
+	<select id="dropMembers" parameterType="com.board.web.domains.Member">
 		${DROP_MEMBERS}
+	</select>
+	
+	<select id="selectByMemberIdAndPassword"
+	resultType="com.board.web.domains.Member"
+	parameterType="com.board.web.domains.Member">
+		select memberid memberId, password
+		into members
+		where memberid like #{memberId} and
+		where password like #{password};
 	</select>
 	
 </mapper>

@@ -46,6 +46,7 @@ document.getElementById('signup_btn').addEventListener('click',function(e){
     	"memberName": document.getElementById('memberName').value,
     	"email": document.getElementById('email').value,
     	"password": document.getElementById('password').value
+    	
     	})
 })
 </script>

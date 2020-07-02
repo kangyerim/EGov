@@ -13,14 +13,12 @@ member = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				if(res === 'SUCCESS'){
+					console.log(res)
 					location.href = _+`/location/member/LoginForm`
-				} else {
-					location.href = _+`/location/member/JoinForm`
-				}
 			},
 			error: function(err){
-				alert(err)
+				console.log('errrrrr')
+				
 			}
 		})
 	}
@@ -32,10 +30,10 @@ member = (function(){
 			dataType: 'json',
 			contentType: 'application/json; charset=UTF-8',
 			success: function(res){
-				alert(res)
+				alert('만원빵')
 			},
 			error: function(err){
-				alert(err)
+				alert('만원빵')
 			}
 		})
 	}

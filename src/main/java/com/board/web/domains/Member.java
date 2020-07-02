@@ -13,5 +13,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Member {
 
-	private String memberId, password, memberName, email;
+	private String memberId, password, memberName, email, accessCode;
 }

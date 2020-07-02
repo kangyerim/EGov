@@ -40,6 +40,7 @@ public class HomeController {
 	@GetMapping("/location/{dir}/{page}")
 	public String move(@PathVariable("dir") String dir,
 			@PathVariable("page") String page) {
+		logger.info("야옹");
 		return String.format("%s/%s.jsp", dir, page);
 	}
 }
