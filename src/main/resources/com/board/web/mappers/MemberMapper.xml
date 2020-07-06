@@ -40,4 +40,9 @@
 		where password like #{password};
 	</select>
 	
+	<select id="listAll"
+	resultType="com.board.web.domains.Member">
+		select * from members
+	</select>
+	
 </mapper>
